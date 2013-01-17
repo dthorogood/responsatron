@@ -1,0 +1,91 @@
+/* Default: 940px and up */
+.span6 { margin-left:-2.66%;}
+    .span6 > li, .span6 > div { float:left;  margin:0 0 30px 2.66%; width:14%;}
+
+.span5 { margin-left:-2%; }
+    .span5 > li, .span5 > div { float:left;  margin:0 0 30px 2%; width:18%;}
+
+.span4 { margin-left:-2%; }
+    .span4 > li, .span4 > div { float:left; margin:0 0 30px 2%; width:23%;}
+
+.span3 { margin-left:-3.33%; }
+    .span3 > li, .span3 > div { float:left;  margin: 0 0 30px 3.33%; width:30%;}
+
+.span2 { margin-left:-2%; }
+    .span2 > li, .span2 > div { float:left; margin: 0 0 30px 2%; width:48%;}
+
+/* Large desktop */
+/*****************/
+@media (min-width: 1210px) {
+    body { font-size:1.2em; }
+    #wrapper { width:1200px; }
+    
+}
+
+/* All desktop */
+/***************/
+@media (min-width: 940px) {
+    .visible_desktop { visibility:visible;}
+    .invisible_desktop { visibility:hidden; }
+}
+
+/* Below desktop */
+/*****************/
+
+
+/* Portrait tablet to landscape and desktop */
+/********************************************/
+@media (min-width: 768px) and (max-width: 940px) {
+    #wrapper { width:100%; }
+    
+}
+
+/* Landscape phone to portrait tablet */
+/**************************************/
+@media (max-width: 768px) {
+    #wrapper { width:100%; }
+    /* span6 becomes span3 */
+    .span6 > li, .span6 > div { margin-left: 3.33%; width:30%;}
+    /* span5 becomes span3 */
+    .span5 > li, .span5 > div { margin-left: 3.33%; width:30%;}
+    /* span4 becomes span3 */
+    .span4 > li, .span4 > div { margin-left: 3.33%; width:30%;}
+    /* span3 becomes span2 */
+    .span3 > li, .span3 > div { margin-left: 2%; width:48%;}
+
+    .tablet_span6 > li, .tablet_span6 > div { margin-left: -2.66%; width:14%; }
+    .tablet_span5 > li, .tablet_span5 > div { margin-left: 2%; width:2%; }
+    .tablet_span4 > li, .tablet_span4 > div { margin-left:2%; width: 23%; }
+    .tablet_span3 > li, .tablet_span3 > div { margin-left:3.33%; width: 30%; }
+    .tablet_span2 > li, .tablet_span2 > div { margin-left:2%; width: 48%; }
+    .tablet_span1 > li, .tablet_span1 > div { width:100% }
+
+    .hidden_tablet { display:none;}
+    .visible_desktop { display:none; }
+    .visible_mobile { display:none; }
+}
+
+
+/* Landscape phones and down */
+/*****************************/
+@media (max-width: 480px) {
+    /* span6 becomes span2 */
+    .span6 > li { margin-left: 2%; width:48%;}
+    /* span5 becomes span2 */
+    .span5 > li { margin-left: 2%; width:48%;}
+    /* span4 becomes span2 */
+    .span4 > li, .span4 > div { margin-left: 2%; width:48%;}
+    /* span3 becomes span1 */
+    .span3 > li { margin-left: 2%; width:98%;}
+
+    .mobile_span6 > li, .mobile_span6 > div { margin-left: -2.66%; width:14%; }
+    .mobile_span5 > li, .mobile_span5 > div { margin-left: 2%; width:2%; }
+    .mobile_span4 > li, .mobile_span4 > div { margin-left:2%; width: 23%; }
+    .mobile_span3 > li, .mobile_span3 > div { margin-left:3.33%; width: 30%; }
+    .mobile_span2 > li, .mobile_span2 > div { margin-left:2%; width: 48%; }
+    .mobile_span1 > li, .mobile_span1 > div { width:100% }
+
+    .hidden_phone { display:none; }
+    .visible_table { display:none; }
+    .visible_desktop { display:none; }
+}

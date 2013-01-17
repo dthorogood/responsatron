@@ -1,0 +1,46 @@
+* {  margin: 0;  padding: 0; 
+    font-family: 'Courier New',Courier,monospace;
+}
+ul { list-style-type:none; }
+
+/* ---------------- Aslett clearing method ------------------------------------------ */
+.clearfix:after { clear: both; content: " ";  display: block; font-size: 0; height: 0; visibility: hidden;}
+* html .clearfix { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
+body { background:#000; font-family:"comic sans"; font-size:0.8em;}
+#wrapper { background:#fff; border:0; margin:10px auto; overflow:hidden; width:980px;}
+#inner_wrapper { padding:15px; }
+
+
+/* ----- Header ----- */
+/* ------------------ */
+#header { }
+
+#main_nav { background:#333; border-bottom:1px solid #000; overflow:hidden; }
+#product_nav { float:left; overflow:hidden; }
+.h_nav > li > ul { width: 100%; }
+.h_nav > li > ul > li { border-left:1px solid #777; border-right:1px solid #000; float:left; padding: 3px 15px;}
+.h_nav > li a { color:#dedede; text-decoration:none; }
+
+#content_nav { float:right; overflow:hidden; }
+#content_nav > li { border-left:1px solid #777; border-right:1px solid #000; float:left; padding: 3px 15px;}
+#content_nav > li a { color:#dedede; text-decoration:none; }
+
+#search {float:right;}
+
+
+.list_item { background:#fff; border:0px solid #333; float:left;}
+.listing_image { line-height:0; text-align:center; }
+.list_item img { max-width:100%;}
+
+@media (max-width: 940px) {
+    .h_nav > li > ul { background:#333; display:none; position:absolute;  }
+    .h_nav > li:hover > ul { display:block; }
+    .h_nav > li > ul > li { float:none; }
+}
+
+@media (max-width: 480px) {
+    #search input[type="text"] { display:none;}
+}
