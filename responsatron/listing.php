@@ -1,4 +1,7 @@
 <?php include('header.php'); ?>
+<?php include('menu.php'); ?>
+
+<div id="page_content">
 <h1>Testing</h1>
 <ul class="listing span5 clearfix ">
 <?php
@@ -10,7 +13,7 @@ for($i=0; $i<12; $i++) {
         $odd_even = "even";
     }
     echo "<li class=\"list_item $odd_even\"><h2>Product $i</h2>";
-    echo"<div class=\"lising_image\"><img src=\"http://lorempixel.com/500/500/city/" . rand(1,10) ."\"></div>";
+    echo"<div class=\"listing_image\"><img src=\"http://lorempixel.com/500/500/city/" . rand(1,10) ."\"></div>";
    /*
     echo "<ul class=\"span4 clearfix\" >";
     for($j=0; $j<8; $j++) {
@@ -24,4 +27,5 @@ for($i=0; $i<12; $i++) {
 ?>
 </ul>
 <h2>More testing</h2>
+</div>
 <?php include('footer.php'); ?>

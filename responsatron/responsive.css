@@ -45,20 +45,31 @@
 @media (max-width: 768px) {
     #wrapper { width:100%; }
     /* span6 becomes span3 */
-    .span6 > li, .span6 > div { margin-left: 3.33%; width:30%;}
+    .span6 { margin-left:-3.33%; }
+        .span6 > li, .span6 > div { margin-left: 3.33%; width:30%;}
     /* span5 becomes span3 */
-    .span5 > li, .span5 > div { margin-left: 3.33%; width:30%;}
+    .span5 { margin-left:-3.33%; }
+        .span5 > li, .span5 > div { margin-left: 3.33%; width:30%;}
     /* span4 becomes span3 */
-    .span4 > li, .span4 > div { margin-left: 3.33%; width:30%;}
+    .span4 { margin-left:-3.33%; }
+        .span4 > li, .span4 > div { margin-left: 3.33%; width:30%;}
     /* span3 becomes span2 */
-    .span3 > li, .span3 > div { margin-left: 2%; width:48%;}
+    .span3 { margin-left:-2%; }
+        .span3 > li, .span3 > div { margin-left: 2%; width:48%;}
 
-    .tablet_span6 > li, .tablet_span6 > div { margin-left: -2.66%; width:14%; }
-    .tablet_span5 > li, .tablet_span5 > div { margin-left: 2%; width:2%; }
-    .tablet_span4 > li, .tablet_span4 > div { margin-left:2%; width: 23%; }
-    .tablet_span3 > li, .tablet_span3 > div { margin-left:3.33%; width: 30%; }
-    .tablet_span2 > li, .tablet_span2 > div { margin-left:2%; width: 48%; }
-    .tablet_span1 > li, .tablet_span1 > div { width:100% }
+    /* Tablet overrides */
+    .tablet_span6 { margin-left:-2.66%; }
+        .tablet_span6 > li, .tablet_span6 > div { margin-left: 2.66%; width:14%; }
+    .tablet_span5 { margin-left:-2%; }
+        .tablet_span5 > li, .tablet_span5 > div { margin-left: 2%; width:2%; }
+    .tablet_span4 { margin-left:-2%; }
+        .tablet_span4 > li, .tablet_span4 > div { margin-left:2%; width: 23%; }
+    .tablet_span3 { margin-left:-3.33%; }
+        .tablet_span3 > li, .tablet_span3 > div { margin-left:3.33%; width: 30%; }
+    .tablet_span2 { margin-left:-2%; }
+         .tablet_span2 > li, .tablet_span2 > div { margin-left:2%; width: 48%; }
+    .tablet_span1 { margin-left:0; } 
+        .tablet_span1 > li, .tablet_span1 > div { width:100% }
 
     .hidden_tablet { display:none;}
     .visible_desktop { display:none; }

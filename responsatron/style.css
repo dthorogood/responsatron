@@ -10,7 +10,10 @@ ul { list-style-type:none; }
 body { background:#000; font-family:Verdana, Helvetica, Arial, sans-serif; font-size:0.8em;}
 #wrapper { background:#fff; border:0; margin:10px auto; overflow:hidden; width:980px;}
 #inner_wrapper { padding:15px; }
+a { color:#333; text-decoration:none; }
+.invisible { visibility:invisible; }
 
+#page_content { float:left; }
 
 /* ----- Header ----- */
 /* ------------------ */
@@ -42,3 +45,12 @@ body { background:#000; font-family:Verdana, Helvetica, Arial, sans-serif; font-
 @media (max-width: 480px) {
     #search input[type="text"] { display:none;}
 }
+
+/* ----- Sidebar ----- */
+/* ------------------- */
+.sidebar { background:#333; float:left; margin-right:15px; width:180px;}
+    .sidebar h2 { background:#000; color:#dedede; padding:5px 10px; }
+    .sidebar ul { }
+    .sidebar li { }
+    .sidebar a { border-bottom:1px solid #000; border-top:1px solid #666; color:#dedede; display:block; padding:5px 10px;}
+    .sidebar a:hover { background:#666; }
