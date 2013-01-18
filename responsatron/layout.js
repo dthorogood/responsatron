@@ -1,5 +1,3 @@
-
-
 jQuery.fn.setAllToMaxHeight = function(){
    return this.height( Math.max.apply(this, jQuery.map( this , function(e){ return jQuery(e).height() }) ) );
 };
@@ -7,6 +5,7 @@ jQuery.fn.setAllToMaxHeight = function(){
 jQuery.fn.matchHeight = function (target){
     return this.height($(target).height());
 }
+
 
 
 function initializeWindow() {
@@ -49,5 +48,22 @@ function resizeend() {
 
 $(document).ready(function() {
     initializeWindow();
+    
+    // Slide in/out sidebar
+    $('.sidebar_toggle a').toggle(function(e) {
+    e.preventDefault();
+    $(this).parent().parent('.sidebar').animate({
+        left:0
+    },
+    500
+    )
+},
+    function() {
+        $(this).parent().parent('.sidebar').animate({
+        left:-180
+    },
+    500
+    )
+});
     
 });

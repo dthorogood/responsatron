@@ -52,5 +52,7 @@ a { color:#333; text-decoration:none; }
     .sidebar h2 { background:#000; color:#dedede; padding:5px 10px; }
     .sidebar ul { }
     .sidebar li { }
-    .sidebar a { border-bottom:1px solid #000; border-top:1px solid #666; color:#dedede; display:block; padding:5px 10px;}
-    .sidebar a:hover { background:#666; }
+    .sidebar ul a { border-bottom:1px solid #000; border-top:1px solid #666; color:#dedede; display:block; padding:5px 10px;}
+    .sidebar ul a:hover { background:#666; }
+    .sidebar .sidebar_toggle { background:#333; display:block; height:20px; line-height:20px; position:absolute; right:-20px; text-align:center; top:50%; width:20px; }
+    .sidebar .sidebar_toggle a { color:#dedede; }

@@ -13,6 +13,11 @@
 
 .span2 { margin-left:-2%; }
     .span2 > li, .span2 > div { float:left; margin: 0 0 30px 2%; width:48%;}
+    
+.hidden_desktop { display:none; }
+.visible_desktop { display:block }
+.visible_tablet { display:none; }
+.visible_phone { display:none; }
 
 /* Large desktop */
 /*****************/
@@ -74,6 +79,10 @@
     .hidden_tablet { display:none;}
     .visible_desktop { display:none; }
     .visible_mobile { display:none; }
+    
+    /* Responsive sidebar */
+    .sidebar { height:100% !important; left:-180px; position:fixed; top:0;}
+    #page_content { width:100% !important; }
 }
 
 
