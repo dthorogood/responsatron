@@ -13,7 +13,8 @@ for($i=0; $i<12; $i++) {
         $odd_even = "even";
     }
     echo "<li class=\"list_item $odd_even\"><h2>Product $i</h2>";
-    echo"<div class=\"listing_image\"><img src=\"http://lorempixel.com/500/500/city/" . rand(1,10) ."\"></div>";
+    $j = rand(1,10);
+    echo"<div class=\"listing_image\"><img src=\"http://lorempixel.com/175/175/city/$j\" data-1200=\"http://lorempixel.com/275/275/city/$j\" data-480=\"http://lorempixel.com/175/175/city/$j\"></div>";
    /*
     echo "<ul class=\"span4 clearfix\" >";
     for($j=0; $j<8; $j++) {
@@ -27,5 +28,6 @@ for($i=0; $i<12; $i++) {
 ?>
 </ul>
 <h2>More testing</h2>
+<p>Here is some standard paragraph text.</p>
 </div>
 <?php include('footer.php'); ?>

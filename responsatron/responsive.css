@@ -19,11 +19,24 @@
 .visible_tablet { display:none; }
 .visible_phone { display:none; }
 
+/* ----- Columns ----- */
+/* ------------------- */   
+.col { float:left; }
+.col_90 { width:90%; }
+.col_80 { width:80%; }
+.col_70 { width:70%; }
+.col_60 { width:60%; }
+.col_50 { width:50%; }
+.col_40 { width:40%; }
+.col_30 { width:30%; }
+.col_20 { width:20%; }
+.col_10 { width:10%; }
+
 /* Large desktop */
 /*****************/
 @media (min-width: 1210px) {
     body { font-size:1.2em; }
-    #wrapper { width:1200px; }
+    .wrapper { width:1200px; }
     
 }
 
@@ -41,14 +54,14 @@
 /* Portrait tablet to landscape and desktop */
 /********************************************/
 @media (min-width: 768px) and (max-width: 940px) {
-    #wrapper { width:100%; }
+    .wrapper { box-shadow:none; width:100%; }
     
 }
 
 /* Landscape phone to portrait tablet */
 /**************************************/
 @media (max-width: 768px) {
-    #wrapper { width:100%; }
+    .wrapper { width:100%; }
     /* span6 becomes span3 */
     .span6 { margin-left:-3.33%; }
         .span6 > li, .span6 > div { margin-left: 3.33%; width:30%;}
@@ -61,6 +74,7 @@
     /* span3 becomes span2 */
     .span3 { margin-left:-2%; }
         .span3 > li, .span3 > div { margin-left: 2%; width:48%;}
+    .col { width: 100%; }
 
     /* Tablet overrides */
     .tablet_span6 { margin-left:-2.66%; }
@@ -77,6 +91,7 @@
         .tablet_span1 > li, .tablet_span1 > div { width:100% }
 
     .hidden_tablet { display:none;}
+    .hidden_desktop { display:block; }
     .visible_desktop { display:none; }
     .visible_mobile { display:none; }
     
@@ -107,5 +122,6 @@
 
     .hidden_phone { display:none; }
     .visible_table { display:none; }
+    .visible_phone { display:block; }
     .visible_desktop { display:none; }
 }
