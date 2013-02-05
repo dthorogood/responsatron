@@ -19,7 +19,7 @@
         </div>
 
 
-        <div class="phone_atc_data">
+        <div class="phone_atc_data clearfix">
             <form action="/k/shopping" method="POST" class="cart_form " id="prod_form" name="prod_main">
 
                 <div id="product_options_container">
@@ -52,21 +52,21 @@
 
 
 
-<div class="col col_60">
+<div class="col col_55">
     <div id="main_image">
-        <img src="http://lorempixel.com/480/480/city/1" data-1200="http://lorempixel.com/800/800/city/1" data-480="http://lorempixel.com/480/480/city/1">
+        <a href="http://lorempixel.com/800/800/city/1" class="fancybox " rel="main_group"><img src="http://lorempixel.com/480/480/city/1" data-1200="http://lorempixel.com/800/800/city/1" data-480="http://lorempixel.com/480/480/city/1" class="shadow"></a>
     </div>
     <h3>Additional Images</h3>
     <ul class="span6 mobile_span4" id="additional_images">
         <?php
         for ($i = 0; $i < 8; $i++) {
-            echo"<li class=\"additional_image list_item\"><div class=\"shadow\"><img src=\"http://lorempixel.com/175/175/city/$i\" data-1200=\"http://lorempixel.com/275/275/city/$i\" data-480=\"http://lorempixel.com/175/175/city/$i\"></div></li>";
+            echo"<li class=\"additional_image list_item\"><a href=\"http://lorempixel.com/800/800/city/$i\" class=\"fancybox\" rel=\"main_group\"><div class=\"shadow\"><img src=\"http://lorempixel.com/175/175/city/$i\" data-1200=\"http://lorempixel.com/275/275/city/$i\" data-480=\"http://lorempixel.com/175/175/city/$i\"></div></a></li>";
         }
         ?>
     </ul>
 </div>
 
-<div class="col col_40" id="product_detail">
+<div class="col col_45" id="product_detail">
     <div class="visible_desktop" id="desktop_atc">
         <div class="highlight shadow">
             <h2>Product Name</h2>

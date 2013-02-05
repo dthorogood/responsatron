@@ -1,3 +1,5 @@
+var debug = true;
+
 jQuery.fn.setAllToMaxHeight = function(){
    return this.height( Math.max.apply(this, jQuery.map( this , function(e){ return jQuery(e).height() }) ) );
 };
@@ -48,12 +50,39 @@ function resizeend() {
     }               
 }
 
-$(document).ready(function() { 
+$(window).load(function() { 
     initializeWindow();
     
-    enquire.register("screen and (min-width:768px)", {
+    $("a.fancybox").fancybox();
+    
+    enquire.register("screen and (min-width:1210px)",{ 
         match : function() {
-            swapImageSizes('data-1200');
+            if (debug) { setDebug('Large Desktop'); }
+        }
+     }).listen();
+    
+    enquire.register("screen and (min-width:940px) and (max-width:1210px)",{ 
+        match : function() {
+            if (debug) { setDebug('Small Desktop'); }
+        }
+     }).listen();
+    
+    enquire.register("screen and (min-width:768px) and (max-width:940px)",{ 
+        match : function() {
+            
+            if (debug) { setDebug('Landscape Tablet'); }
+        }
+     }).listen();
+     
+     enquire.register("screen and (min-width:768px)", {
+         match : function() {
+             swapImageSizes('data-1200');
+         }
+     }).listen();
+    
+    enquire.register("screen and (min-width:480px) and (max-width:768px)", {
+        match : function() {
+            if (debug) { setDebug('Portrait Tablet'); }
         }
     }).listen();
     
@@ -61,11 +90,19 @@ $(document).ready(function() {
         match : function() {
             swapImageSizes('data-480');
             $('#search').addClass('mobile');
+            if (debug) { setDebug('Landscape Phone'); }
         },
         unmatch : function() {
             $('#search').removeClass('mobile');
+            $('#search input[type="text"]').show();
         }
     }).listen();
+    
+     enquire.register("screen and (max-width:320px)",{ 
+        match : function() {
+            if (debug) { setDebug('Portrait Phone'); }
+        }
+     }).listen();
     
     // Slide in/out sidebar
     $('.sidebar_toggle a').toggle(function(e) {
@@ -95,10 +132,7 @@ $('#search_toggle').toggle(function(e) {
     
 });
 
-
-
-
-function swapImageSizes(newSize) { console.log('swapping images');
+function swapImageSizes(newSize) {
     $('img').each(function() { 
         $(this).attr('src', $(this).attr(newSize));
         });
@@ -119,4 +153,8 @@ $(window).scroll(function() {
 
 function getScrollTop() {
     return $(window).scrollTop();
+}
+
+function setDebug(content) {
+    $('#debug').html(content + "<p class='small'>(" + $(window).width() + " x " + $(window).height() + ")</p>");
 }

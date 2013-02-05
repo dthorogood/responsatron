@@ -11,14 +11,24 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="responsive.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="matchMedia.js"></script>
+        <script type="text/javascript" src="css3-mediaqueries.js"></script>
         <script type="text/javascript" src="enquire.js"></script>
         <script type="text/javascript" src="layout.js"></script>
         <script type="text/javascript" src="bxslider.js"></script>
+        <script type="text/javascript" src="fancybox.js"></script>
         <link rel="stylesheet" type="text/css" href="bxslider.css">
+        <link rel="stylesheet" type="text/css" href="fancybox.css">
+        
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="ie.css">
+        <![endif]-->
         
 
     </head>
     <body>
+        <div id="debug">
+        </div>
         <div id="header_container" class="full_width">
         <div id="header" class="wrapper">
                     <div id="logo"><h1>Logo</h1></div>
@@ -43,9 +53,9 @@ and open the template in the editor.
                         <ul id="content_nav" class="h_nav">
                             <li class="invisible_desktop"><a href="#">&#9776;</a>
                                 <ul class="visible_desktop dropdown">
-                            <li><a href="#">Page 1</a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
+                            <li><a href="index.php">Index</a></li>
+                            <li><a href="listing">Listing</a></li>
+                            <li><a href="detail">Detail</a></li>
                                 </ul>
                             </li>
                         </ul>
