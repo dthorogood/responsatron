@@ -44,7 +44,7 @@
 /***************/
 @media (min-width: 940px) {
     .visible_desktop { visibility:visible;}
-    .invisible_desktop { visibility:hidden; }
+    .invisible_desktop { line-height:0; padding:0 !important; visibility:hidden; }
 }
 
 /* Below desktop */

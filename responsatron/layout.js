@@ -22,6 +22,8 @@ function initializeWindow() {
     });
     $('.listing_image').setAllToMaxHeight();
     //console.log($('.sidebar').outerWidth(true) + " : " + $('#page_content').width() + " : " + $(document).width());
+    
+    navTop = $('.scroll_top').offset();
 }
 
 
@@ -100,4 +102,21 @@ function swapImageSizes(newSize) { console.log('swapping images');
     $('img').each(function() { 
         $(this).attr('src', $(this).attr(newSize));
         });
+}
+
+var navTop = 0;
+$(window).scroll(function() { 
+    var scrollTop = getScrollTop();
+    if(navTop != null) {
+        if(scrollTop >= navTop.top) {
+            $('.scroll_top').addClass("fixed_top");
+        }
+        else {
+            $('.scroll_top').removeClass("fixed_top");
+        }
+    }
+});
+
+function getScrollTop() {
+    return $(window).scrollTop();
 }

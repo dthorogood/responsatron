@@ -3,7 +3,7 @@
 
 <div id="page_content">
 <h1>Testing</h1>
-<ul class="listing span5 clearfix ">
+<ul class="listing span5 tablet_span4 clearfix ">
 <?php
 for($i=0; $i<12; $i++) {
     if(($i % 2) == 0) {
